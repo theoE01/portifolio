@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>João Almeida | Dev</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #0a0a0a, #111);
+  color: #fff;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* TITLES */
+h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* LINKS */
+a {
+  color: #0a84ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+/* ANIMAÇÃO SUAVE */
+.fade {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<header class="fade">
+  <h1>João Almeida</h1>
+  <p>Desenvolvedor | Python • Web • Automação</p>
+</header>
+
+<section class="fade">
+  <div class="card">
+    <h2>Sobre mim</h2>
+    <p>
+      Desenvolvedor focado em criar soluções práticas com Python e web.
+      Gosto de automatizar processos e transformar ideias em projetos reais.
+    </p>
+  </div>
+</section>
+
+<section class="fade">
+  <h2>Projetos</h2>
+
+  <div class="card">
+    <h3>Conversor de imagem para .PES</h3>
+    <p>Ferramenta em Python para gerar arquivos de bordado automaticamente.</p>
+    <a href="#">Ver no GitHub</a>
+  </div>
+
+  <div class="card">
+    <h3>Projeto exemplo</h3>
+    <p>Descrição rápida do projeto.</p>
+    <a href="#">Ver projeto</a>
+  </div>
+
+</section>
+
+<footer class="fade">
+  <p>© 2026 João Almeida</p>
+</footer>
+
+</div>
+
+</body>
+</html>
