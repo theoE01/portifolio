@@ -33,7 +33,6 @@ body {
   position: fixed;
 }
 
-/* PROFILE */
 .profile {
   text-align: center;
 }
@@ -45,6 +44,10 @@ body {
   box-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
+.profile h2 {
+  font-size: 20px;
+}
+
 /* MAIN */
 .main {
   margin-left: 260px;
@@ -52,7 +55,7 @@ body {
   width: 100%;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
   margin-bottom: 40px;
 }
@@ -60,11 +63,12 @@ body {
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 20px;
+  justify-content: center;
 }
 
-/* CARD BASE */
+/* CARD */
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05));
   border-radius: 20px;
@@ -77,19 +81,16 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.3);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 0 20px rgba(255,255,255,0.3);
 }
 
-/* IMAGEM */
+/* IMAGEM QUADRADA */
 .card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover; /* ESSENCIAL */
-  transition: 0.4s;
-}
-
-.card:hover img {
-  transform: scale(1.05);
+  aspect-ratio: 1 / 1; /* quadrado perfeito */
+  object-fit: cover;
 }
 
 /* CONTEÚDO */
@@ -98,11 +99,12 @@ body {
 }
 
 .card-content h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
 .card-content p {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
 }
 
@@ -122,31 +124,31 @@ body {
 <!-- MAIN -->
 <div class="main">
 
-  <!-- PROJETOS -->
   <div class="section">
     <h2>Projetos</h2>
 
     <div class="grid">
 
-      <!-- AUTO ESCOLA CARD 1 -->
+      <!-- CARD 1 -->
       <div class="card">
-        <img src="assets/autoaula.jpg" alt="Auto Escola">
+        <img src="assets/autoaula.jpg" alt="Sistema auto escola">
         <div class="card-content">
           <h3>Sistema Auto Escola</h3>
-          <p>Gerenciamento de alunos, aulas e processos administrativos.</p>
+          <p>Gerenciamento de alunos e aulas.</p>
         </div>
       </div>
 
-      <!-- AUTO ESCOLA CARD 2 -->
+      <!-- CARD 2 -->
       <div class="card">
-        <img src="assets/iaautoaula.jpg" alt="Auto Escola UI">
+        <img src="assets/iaautoaula.jpg" alt="Interface do sistema">
         <div class="card-content">
           <h3>Interface do Sistema</h3>
-          <p>Interface focada em organização e usabilidade.</p>
+          <p>Foco em organização e usabilidade.</p>
         </div>
       </div>
 
     </div>
+
   </div>
 
 </div>
