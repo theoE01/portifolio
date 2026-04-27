@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Almeida | Dev</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/606/606204.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <style>
         /* CONFIGURAÇÕES GERAIS */
@@ -21,6 +25,7 @@
             color: white;
             display: flex;
             min-height: 100vh;
+            line-height: 1.6;
         }
 
         /* BARRA LATERAL (SIDEBAR) */
@@ -49,7 +54,16 @@
         }
 
         .profile h2 { font-size: 22px; margin-bottom: 5px; text-align: center; }
-        .profile p { font-size: 14px; opacity: 0.7; margin-bottom: 30px; text-align: center; }
+        .profile p { font-size: 14px; opacity: 0.7; margin-bottom: 25px; text-align: center; }
+
+        /* TECH BADGES SIDEBAR */
+        .tech-stack-mini {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.6);
+        }
 
         .nav-links { width: 100%; list-style: none; }
         .nav-links li { margin: 12px 0; }
@@ -131,7 +145,7 @@
 
         .card-content { padding: 25px; }
         .card-content h3 { color: #4fc3f7; margin-bottom: 10px; font-size: 19px; }
-        .card-content p { font-size: 14px; line-height: 1.6; opacity: 0.8; }
+        .card-content p { font-size: 14px; opacity: 0.8; }
 
         /* LINHA DO TEMPO (TRAJETÓRIA) */
         .timeline {
@@ -168,7 +182,7 @@
             margin-top: 15px;
         }
 
-        .highlight-box strong { color: #4fc3f7; }
+        strong { color: #4fc3f7; }
 
         /* RESPONSIVIDADE */
         @media (max-width: 900px) {
@@ -192,6 +206,13 @@
             <img src="https://via.placeholder.com/130" alt="João Almeida">
             <h2>João Almeida</h2>
             <p>Desenvolvedor Web & Mobile</p>
+        </div>
+
+        <div class="tech-stack-mini">
+            <i class="devicon-python-plain" title="Python"></i>
+            <i class="devicon-nodejs-plain" title="Node.js"></i>
+            <i class="devicon-javascript-plain" title="JavaScript"></i>
+            <i class="devicon-linux-plain" title="Linux"></i>
         </div>
 
         <ul class="nav-links">
@@ -234,19 +255,19 @@
                     <div class="timeline-content">
                         <h3>Técnico em Desenvolvimento Web e Mobile</h3>
                         <span>Escola do Futuro de Goiás</span>
-                        <p>Formação técnica completa em stack web moderno e desenvolvimento para dispositivos móveis.</p>
+                        <p>Formação técnica focada em tecnologias Full Stack e mobile.</p>
                         
                         <div class="highlight-box">
-                            <p><strong>Pesquisa de Inovação (990 Horas):</strong> Desenvolvimento de um mentor baseado em <strong>Inteligência Artificial</strong> operando via WhatsApp, voltado especificamente para o ensino de programação web.</p>
+                            <p><strong>Pesquisa de Inovação (990 Horas):</strong> Desenvolvimento de um mentor baseado em <strong>Inteligência Artificial</strong> operando via WhatsApp, voltado ao ensino de programação web.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Suporte e Administração de TI</h3>
+                        <h3>TI & Automação</h3>
                         <span>Experiência Profissional</span>
-                        <p>Atuação em administração de redes, automação de servidores e suporte técnico especializado em ambientes Windows e Linux.</p>
+                        <p>Atuação em administração de redes e automação de servidores, com foco em eficiência e segurança de infraestrutura.</p>
                     </div>
                 </div>
 
