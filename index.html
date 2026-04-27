@@ -14,132 +14,159 @@
   box-sizing: border-box;
 }
 
-/* FUNDO AERO */
+/* BODY */
 body {
   font-family: "Segoe UI", sans-serif;
   background: radial-gradient(circle at top, #4fc3f7, #0d47a1 70%);
   color: white;
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
   min-height: 100vh;
-}
-
-/* CONTAINER */
-.container {
-  max-width: 900px;
-  margin: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05));
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255,255,255,0.3);
   padding: 20px;
+  position: fixed;
 }
 
-/* HEADER */
-header {
+/* FOTO */
+.profile {
   text-align: center;
-  padding: 80px 20px 40px;
 }
 
-header h1 {
-  font-size: 42px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+.profile img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
-header p {
+.profile h2 {
+  font-size: 20px;
+}
+
+/* DESCRIÇÃO */
+.bio {
+  margin-top: 20px;
+  font-size: 14px;
   opacity: 0.9;
 }
 
-/* CARD ESTILO VIDRO */
+/* CONTATO */
+.contact {
+  margin-top: 30px;
+}
+
+.contact a {
+  display: block;
+  color: #bbdefb;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+/* CONTEÚDO */
+.main {
+  margin-left: 260px;
+  padding: 30px;
+  width: 100%;
+}
+
+/* SEÇÕES */
+.section {
+  margin-bottom: 30px;
+}
+
+/* CARDS */
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05));
-  border-radius: 20px;
   padding: 20px;
+  border-radius: 20px;
   margin: 15px 0;
-  backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 
-    0 10px 25px rgba(0,0,0,0.3),
-    inset 0 1px 0 rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   transition: 0.3s;
 }
 
-/* HOVER COM GLOW */
 .card:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 
-    0 15px 35px rgba(0,0,0,0.4),
-    0 0 20px rgba(255,255,255,0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.4);
 }
 
-/* TITULOS */
-h2 {
-  margin-bottom: 10px;
-}
-
-/* LINKS */
-a {
-  color: #bbdefb;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  opacity: 0.8;
-}
-
-/* ANIMAÇÃO */
-.fade {
-  animation: fade 1s ease;
-}
-
-@keyframes fade {
-  from {opacity: 0; transform: translateY(15px);}
-  to {opacity: 1; transform: translateY(0);}
+/* GRID DE PROJETOS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- SIDEBAR -->
+<div class="sidebar">
 
-<header class="fade">
-  <h1>João Almeida</h1>
-  <p>Desenvolvedor • Python • Web</p>
-</header>
-
-<section class="fade">
-  <div class="card">
-    <h2>Sobre mim</h2>
-    <p>
-      Desenvolvedor focado em criar soluções práticas e automações.
-      Curto tecnologia e transformar ideias em projetos reais.
-    </p>
-  </div>
-</section>
-
-<section class="fade">
-  <h2>Projetos</h2>
-
-  <div class="card">
-    <h3>Conversor para .PES</h3>
-    <p>Ferramenta em Python para gerar bordados automaticamente.</p>
-    <a href="#">Ver no GitHub</a>
+  <div class="profile">
+    <img src="https://via.placeholder.com/120" alt="foto">
+    <h2>João Almeida</h2>
   </div>
 
-  <div class="card">
-    <h3>Outro projeto</h3>
-    <p>Descrição rápida do projeto.</p>
-    <a href="#">Ver projeto</a>
+  <div class="bio">
+    Desenvolvedor focado em Python, automação e web. Buscando criar soluções práticas e eficientes.
   </div>
 
-</section>
+  <div class="contact">
+    <h3>Contato</h3>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Email</a>
+  </div>
 
-<footer class="fade">
-  <p>© 2026 João Almeida</p>
-</footer>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="main">
+
+  <div class="section">
+    <h2>Formação</h2>
+    <div class="card">
+      <p>Curso X - Área de Tecnologia</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Projetos</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Conversor .PES</h3>
+        <p>Ferramenta em Python para gerar bordados automaticamente.</p>
+      </div>
+
+      <div class="card">
+        <h3>Projeto 2</h3>
+        <p>Descrição do projeto.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Galeria</h2>
+
+    <div class="grid">
+      <div class="card">Imagem 1</div>
+      <div class="card">Imagem 2</div>
+    </div>
+
+  </div>
 
 </div>
 
