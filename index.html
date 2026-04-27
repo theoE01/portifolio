@@ -6,6 +6,7 @@
 <title>João Almeida | Dev</title>
 
 <style>
+
 /* RESET */
 * {
   margin: 0;
@@ -13,11 +14,12 @@
   box-sizing: border-box;
 }
 
-/* BODY */
+/* FUNDO AERO */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #0a0a0a, #111);
-  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #4fc3f7, #0d47a1 70%);
+  color: white;
+  min-height: 100vh;
 }
 
 /* CONTAINER */
@@ -35,61 +37,69 @@ header {
 
 header h1 {
   font-size: 42px;
-  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 
 header p {
-  color: #aaa;
-  margin-top: 10px;
+  opacity: 0.9;
 }
 
-/* GLASS CARD */
+/* CARD ESTILO VIDRO */
 .card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05));
   border-radius: 20px;
   padding: 20px;
   margin: 15px 0;
-  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.5);
   transition: 0.3s;
 }
 
+/* HOVER COM GLOW */
 .card:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.08);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.4),
+    0 0 20px rgba(255,255,255,0.4);
 }
 
-/* TITLES */
+/* TITULOS */
 h2 {
   margin-bottom: 10px;
-  font-weight: 500;
 }
 
 /* LINKS */
 a {
-  color: #0a84ff;
+  color: #bbdefb;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 40px;
-  color: #777;
+  opacity: 0.8;
 }
 
-/* ANIMAÇÃO SUAVE */
+/* ANIMAÇÃO */
 .fade {
-  animation: fadeIn 1s ease;
+  animation: fade 1s ease;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
+@keyframes fade {
+  from {opacity: 0; transform: translateY(15px);}
   to {opacity: 1; transform: translateY(0);}
 }
-</style>
 
+</style>
 </head>
 <body>
 
@@ -97,15 +107,15 @@ footer {
 
 <header class="fade">
   <h1>João Almeida</h1>
-  <p>Desenvolvedor | Python • Web • Automação</p>
+  <p>Desenvolvedor • Python • Web</p>
 </header>
 
 <section class="fade">
   <div class="card">
     <h2>Sobre mim</h2>
     <p>
-      Desenvolvedor focado em criar soluções práticas com Python e web.
-      Gosto de automatizar processos e transformar ideias em projetos reais.
+      Desenvolvedor focado em criar soluções práticas e automações.
+      Curto tecnologia e transformar ideias em projetos reais.
     </p>
   </div>
 </section>
@@ -114,13 +124,13 @@ footer {
   <h2>Projetos</h2>
 
   <div class="card">
-    <h3>Conversor de imagem para .PES</h3>
-    <p>Ferramenta em Python para gerar arquivos de bordado automaticamente.</p>
+    <h3>Conversor para .PES</h3>
+    <p>Ferramenta em Python para gerar bordados automaticamente.</p>
     <a href="#">Ver no GitHub</a>
   </div>
 
   <div class="card">
-    <h3>Projeto exemplo</h3>
+    <h3>Outro projeto</h3>
     <p>Descrição rápida do projeto.</p>
     <a href="#">Ver projeto</a>
   </div>
